@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/bootstrap.css">
+    <link rel="stylesheet" href="static/userRegistration.css">
+    <title>User Registration form</title>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-bg-color">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Job Portal</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+
+        <div class="card text-white bg-info mb-3">
+            <div class="card-header">User Registration Form</div>
+
+            <div class="card-body">
+                <br>
+                <br>
+                <form action="/" method="POST">
+                    <!-- Div for Personal Details -->
+                    <a class="addsection" data-toggle="collapse" href="#collapsepersonal" role="button"
+                        aria-expanded="false" aria-controls="collapsepersonal">
+                        <h2 class="display-6">+ Personal Details</h2>
+                    </a>
+
+                    <div class="collapse show" id="collapsepersonal">
+                        <br>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label" for="firstname">First Name</label>
+                                <input class="form-control" type="text" name="firstname" id="firstname"
+                                    placeholder="First Name" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="lastname">Last Name</label>
+                                <input class="form-control" type="text" name="lastname" id="lastname"
+                                    placeholder="Last Name" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="gender">Gender</label>
+                                <select class="form-select" name="gender" id="gender">
+                                    <option value="">Select</option>
+                                    <option value="prefernottosay">Prefer not to say</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="dob">Date of Birth</label>
+                                <input class="form-control" type="date" name="dob" id="dob" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-control" type="email" name="email" id="email" placeholder="Email"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="password">Enter Password</label>
+                                <input class="form-control" id="password" type="password"
+                                    title="Password must contain at least 6 characters, including UPPER/lowercase and numbers."
+                                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="password"
+                                    onkeyup='check();' placeholder="Password">
+                                <span id='pwdmsg1'></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="confirm_password">Confirm Password</label>
+                                <input class="form-control" class="text" type="password"
+                                    title="Please enter the same Password as above." id="confirm_password" required
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="confirm_password"
+                                    onkeyup='check();' placeholder="Confirm Password">
+                                <span id='pwdmsg2'></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="phone">Phone</label>
+                                <input class="form-control" type="tel" name="phone" id="phone" minlength="10"
+                                    maxlength="10" placeholder="Enter 10 Digit Number" pattern="[0-9]{10}" required>
+                                <span class="telvalidity"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="yearsofexp">Years of Experience</label>
+                                <input class="form-control" type="number" name="yearsofexp" id="yearsofexp" min="0"
+                                    max="55" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label" for="profilepic">Profile Picture</label>
+                                <input class="form-control form-control-sm" type="file" name="profilepic"
+                                    id="profilepic" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Div for Qualification Details -->
+
+                    <div>
+                        <br>
+                        <br>
+                        <a class="addsection" data-toggle="collapse" href="#collapsequal" role="button"
+                            aria-expanded="false" aria-controls="collapsequal">
+                            <h2 class="display-6">+ Qualification Details</h2>
+                        </a>
+
+                        <div class="collapse" id="collapsequal">
+                            <br>
+                            <div id="clonedqual1" class="clonedqual">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="institutename1">Institute Name</label>
+                                        <input class="form-control" type="text" name="institutename1"
+                                            id="institutename1" placeholder="Institute Name">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="startedstudyingyear1">Start Date</label>
+                                        <input class="form-control" type="date" name="startedstudyingyear1"
+                                            id="startedstudyingyear1">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="endingstudyingyear1">End Date</label>
+                                        <input class="form-control" type="date" name="endingstudyingyear1"
+                                            id="endingstudyingyear1">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="degree1">Degree</label>
+                                        <input class="form-control" type="text" name="degree1" id="degree1"
+                                            placeholder="e.g. B.Tech">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="stream1">stream1</label>
+                                        <input class="form-control" type="text" name="stream1" id="stream1"
+                                            placeholder="e.g. Computer Science">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="percentage1">Percentage</label>
+                                        <input class="form-control" type="number" name="percentage1" id="percentage1"
+                                            min="0" max="100">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <br>
+                            <div>
+                                <input class="btn btn-success" type="button" id="btnAddqual"
+                                    value="Add Another Qualification" />
+                                <input class="btn btn-danger" type="button" id="btnDelqual"
+                                    value="Remove Qualification" />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Div for Skills -->
+
+                    <div>
+                        <br>
+                        <br>
+                        <a class="addsection" data-toggle="collapse" href="#collapseskill" role="button"
+                            aria-expanded="false" aria-controls="collapseskill">
+                            <h2 class="display-6">+ Skills</h2>
+                        </a>
+
+                        <div class="collapse" id="collapseskill">
+                            <br>
+                            <div id="clonedskill1" class="clonedskill">
+                                <div>
+                                    <div class="mb-3">
+                                        <label for="skill1">Skill</label>
+                                        <input class="form-control" type='text' name='skill1' id='skill1' />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <input class="btn btn-success" type="button" id="btnAddskill"
+                                    value="Add Another Skill" />
+                                <input class="btn btn-danger" type="button" id="btnDelskill" value="Remove Skill" />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Div for Work Experience -->
+
+                    <div>
+                        <br>
+                        <br>
+                        <a class="addsection" data-toggle="collapse" href="#collapsework" role="button"
+                            aria-expanded="false" aria-controls="collapsework">
+                            <h2 class="display-6">+ Work Experience</h2>
+                        </a>
+
+                        <div class="collapse" id="collapsework">
+                            <br>
+                            <div id="clonedwork1" class="clonedwork">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="role1">Role</label>
+                                        <input class="form-control" type="text" name="role1" id="role1"
+                                            placeholder="e.g. Web Developer">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="organization1">Organization</label>
+                                        <input class="form-control" type="text" name="organization1" id="organization1"
+                                            placeholder="e.g. Publicis Sapient">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="workedlocation1">Location</label>
+                                        <input class="form-control" type="text" name="workedlocation1"
+                                            id="workedlocation1" placeholder="e.g. Bangalore">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="startedworkingyear1">Start Date</label>
+                                        <input class="form-control" type="date" name="startedworkingyear1"
+                                            id="startedworkingyear1">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="endingworkingyear1">End Date</label>
+                                        <input class="form-control" type="date" name="endingworkingyear1"
+                                            id="endingworkingyear1">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <textarea class="form-control" name="shortdescriptionofworkdone1"
+                                            id="shortdescriptionofworkdone1" cols="30" rows="10"
+                                            placeholder="Short Description of work done"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <br>
+                            <div>
+                                <input class="btn btn-success" type="button" id="btnAddwork"
+                                    value="Add Another Experience" />
+                                <input class="btn btn-danger" type="button" id="btnDelwork" value="Remove Experience" />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Div for Project Details -->
+
+                    <div>
+                        <br>
+                        <br>
+                        <a class="addsection" data-toggle="collapse" href="#collapseproj" role="button"
+                            aria-expanded="false" aria-controls="collapseproj">
+                            <h2 class="display-6">+ Project Details</h2>
+                        </a>
+
+                        <div class="collapse" id="collapseproj">
+                            <br>
+                            <div id="clonedproject1" class="clonedproject">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="projecttitle1">Title</label>
+                                        <input class="form-control" type="text" name="projecttitle1" id="projecttitle1"
+                                            placeholder="e.g. Job Registration Protal">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="startedprojectyear1">Start Date</label>
+                                        <input class="form-control" type="date" name="startedprojectyear1"
+                                            id="startedprojectyear1">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="endingprojectyear1">End Date</label>
+                                        <input class="form-control" type="date" name="endingprojectyear1"
+                                            id="endingprojectyear1">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <textarea class="form-control" name="shortdescriptionofprojectdone1"
+                                            id="shortdescriptionofprojectdone1" cols="30" rows="10"
+                                            placeholder="Short Description of project"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <br>
+                            <div>
+                                <input class="btn btn-success" type="button" id="btnAddproject"
+                                    value="Add Another Project" />
+                                <input class="btn btn-danger" type="button" id="btnDelproject" value="Remove project" />
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Div for Certifications -->
+
+                    <div>
+                        <br>
+                        <br>
+                        <a class="addsection" data-toggle="collapse" href="#collapsecert" role="button"
+                            aria-expanded="false" aria-controls="collapsecert">
+                            <h2 class="display-6">+ Certifications</h2>
+                        </a>
+
+                        <div class="collapse" id="collapsecert">
+                            <br>
+                            <div id="clonedcertificate1" class="clonedcertificate">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="coursename1">Course Name</label>
+                                        <input class="form-control" type="text" name="coursename1" id="coursename1"
+                                            placeholder="e.g. SQL">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="courseorganization1">Issuing Organization</label>
+                                        <input class="form-control" type="text" name="courseorganization1"
+                                            id="courseorganization1" placeholder="e.g. Udemy">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="certificateissuedate1">Issue Date</label>
+                                        <input class="form-control" type="date" name="certificateissuedate1"
+                                            id="certificateissuedate1">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <br>
+                            <div>
+                                <input class="btn btn-success" type="button" id="btnAddcertificate"
+                                    value="Add Another certificate" />
+                                <input class="btn btn-danger" type="button" id="btnDelcertificate"
+                                    value="Remove certificate" />
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Div for Awards and Achievements -->
+
+                    <div>
+                        <br>
+                        <br>
+                        <a class="addsection" data-toggle="collapse" href="#collapseawards" role="button"
+                            aria-expanded="false" aria-controls="collapseawards">
+                            <h2 class="display-6">+ Awards and Achievments</h2>
+                        </a>
+                        <div class="collapse" id="collapseawards">
+                            <br>
+                            <p>Add your accomplishments such as rewards, recognitions, test scores, certifications, etc.
+                                here.
+                            </p>
+                            <div class="mb-3">
+                                <textarea class="form-control" name="descriptionofaccomplishments"
+                                    id="descriptionofaccomplishments" cols="30" rows="10"
+                                    placeholder="e.g. Achieved Expert level in CodeForces"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Div for Others -->
+
+
+
+                    <br>
+                    <br>
+                    <a class="addsection" data-toggle="collapse" href="#collapseothers" role="button"
+                        aria-expanded="false" aria-controls="collapseothers">
+                        <h2 class="display-6">+ Others</h2>
+                    </a>
+                    <div class="collapse" id="collapseothers">
+                        <br>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <p>Relocate: <label for="yesrelocate">Yes</label>
+                                    <input type="radio" name="relocate" id="yesrelocate" value="yes" required>
+
+                                    <label for="norelocate">No</label>
+                                    <input type="radio" name="relocate" id="norelocate" value="no" required>
+                                <p>
+
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="locationpreference">Location Preference</label>
+                                <select class="form-select" name="locationpreference" id="locationpreference" required>
+                                    <option value="">Select</option>
+                                    <option value="bangalore">Bangalore</option>
+                                    <option value="hyderabad">Hyderabad</option>
+                                    <option value="gurugram">Gurugram</option>
+                                    <option value="mumbai">Mumbai</option>
+                                </select>
+                            </div>
+
+
+
+                            <div class="col-md-6">
+                                <label class="form-label" for="salaryexp">Salary Expectation</label>
+                                <input class="form-select" type="number" name="salaryexp" id="salaryexp" min="0"
+                                    max="1000000000" required>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Div for Registration Button -->
+                    <br>
+                    <br>
+                    <div>
+                        <button class="btn btn-primary">Register</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+    <footer class="footer-css"></footer>
+    <script src="http://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="javascript/userRegistration.js"></script>
+</body>
+
+</html>

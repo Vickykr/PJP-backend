@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="./static//main.css">
+  <link rel="stylesheet" href="./static//bootstrap.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div>
+    <header>
+
+      <nav class="navbar navbar-expand-sm navbar-dark nav-bg-color">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Job Portal</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <section>
+      <div class="main-SignUPlayouts wrapper">
+        <div class="main-agileinfo">
+          <div class="agileits-top">
+            <h2>User SignUP</h2>
+            <form id="SignUP_form" method="get" action="UserRegistration.html" onsubmit="return validateForm(this)">
+
+              <input class="text email" id="email_id" type="email" name="email" placeholder="Email ID" required="">
+              <p id="user_email"></p>
+              <input class="text" id="myPwd1" type="password"
+                title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." required
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" placeholder="Password">
+              <p id="user_pwd1"></p>
+              <input class="text" type="password" title="Please enter the same Password as above." id="myPwd2" required
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" placeholder="Confirm Password">
+              <p id="user_pwd2"></p>
+              </p>
+              <input type="submit" value="SIGN UP" id="mySignUp">
+            </form>
+            <p>Already have an Account? <a href="userSignIn.html"> SignIN Now!</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-css"></footer>
+    <!-- //main -->
+
+    <script src="./javascript//userSignUp.js">
+
+    </script>
+</body>
+
+</html>

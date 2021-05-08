@@ -1,0 +1,127 @@
+#phone + span {
+    padding-right: 30vh;
+  }
+  
+#phone:invalid+span:after {
+    position: absolute; 
+    content: '✖';
+    font-weight: bold;
+    padding-left: 1vh;
+    color: #ef476f;
+}
+  
+#phone:valid+span:after {
+    position: absolute;
+    content: '✓';
+    font-weight: bold;
+    padding-left: 1vh;
+    color: #06d6a0;
+} 
+
+.nav-bg-color {
+    background-color: rgb(1, 47, 73) !important;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+  .nav-item a:hover {
+      -webkit-transition: .5s all;
+      -moz-transition: .5s all;
+      -o-transition: .5s all;
+      -ms-transition: .5s all;
+      transition: .5s all;
+      background-color: #0f4869;
+  
+}
+  .navbar-brand:hover{
+      
+      -webkit-transition: .5s all;
+      -moz-transition: .5s all;
+      -o-transition: .5s all;
+      -ms-transition: .5s all;
+      transition: .5s all;
+      background-color: #0f4869;
+  
+}
+
+body{
+    background: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container{
+    width: 50%;
+    margin-top: 5%;
+}
+
+.bg-info {
+    padding: 3em;
+    border: solid rgb(1, 47, 73);
+    background-color: #fff !important;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px #838383 !important;
+    width: 90%;
+}
+
+.card-header{
+    color: rgb(1, 47, 73);
+    text-align: center;
+    background-color: #fff;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.btn-primary{
+    background-color:#06d6a0;
+    border-color: #06d6a0;
+    
+}
+
+.btn-primary:hover{
+    background-color:#118ab2;
+    border-color: #118ab2;
+}
+
+.img-adjust {
+    height: 90vh;
+    width: 100%;
+    position: absolute;
+}
+
+.addsection {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #073b4c;
+    font-size: x-small;
+    font-weight: bolder;
+    
+}
+
+.addsection:hover {
+    color: #06d6a0;
+}
+
+
+.display-6{
+    font-size: x-large;
+}
+
+.collapse{
+    color: #073b4c;
+}
+
+.btn-success{
+    background-color: #06d6a0;
+    border-color: #06d6a0;
+}
+
+.btn-danger{
+    background-color: #ef476f;
+    border-color: #ef476f;
+}
+
+.footer-css {
+    background-color: rgb(1, 47, 73) !important;
+    height: 10vh;
+    width: 100%;
+}

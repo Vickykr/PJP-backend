@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Filter Page</title>
+  <link rel="stylesheet" href="./static/Admin_Pannel.css">
+  <link rel="stylesheet" href="./static/main.css">
+  <link rel="stylesheet" href="./static/bootstrap.css">
+</head>
+<body>
+  <div>
+    <div id="header">
+      <div class="logo">
+        Admin Page
+        <div class="topnav-right">
+        <div class="topnav">
+          <img src="https://cdn2.iconfinder.com/data/icons/users-6/100/USER2-512.png" width="50" height="50"  style="vertical-align:middle">
+          <a href="Admin_Profile.html">My Profile</a>
+        </div>
+        </div>
+      </div>
+  </div>
+    <a class="mobile">MENU</a>
+    <div id="container">
+        <div class="sidebar">
+            <ul id="nav">
+              <li>  
+                <a  href="userDetails.html">User Details</a>
+              </li>
+              <li>
+                  <a href="admin.html">Filter</a>
+              </li>
+              <li>
+                <a href="sortPage.html">Sort </a>
+              </li>
+
+            </ul>
+
+        </div>
+    <div class="content">
+
+
+      <h3>Job Profile</h3>
+      <select name="Job" id="select2" style="height:50px; width:500px; font-size: large">
+          <option value="Web Developer">Web Developer</option>
+          <option value="Senior Software Engineer">Senior Software Engineer</option>
+          <option value="Java Developer">Java Developer</option>
+          <option value="C/C++ Developer">C/C++ Developer</option>
+          <option value="PHP Developer">PHP Developer</option>
+          <option value="Android Developer">Android Developer</option>
+        </select>    
+        <button id="btn2" class="btn"><img src="https://th.bing.com/th/id/Rd41427e11f0b5069fda610bf8b49b930?rik=J%2fMubujtBPOhXg&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fcustom-icon-design%2fmono-general-2%2f512%2fsearch-icon.png&ehk=5AO8%2fHeS7wi4cF9kkpMRuaQOU2o3H6iNQ%2fONeuKqc4I%3d&risl=&pid=ImgRaw" style="height: 40px; width: 40px; vertical-align:middle;">
+        </button>
+        <div>
+          <div id="output1" ></div>
+      </div>
+
+      <br><br><br>
+
+
+      
+    <h3>Work Experience (In Years)</h3>
+    <input type="number" name="years" id="years" value="0" style="height:50px; width:500px; font-size: large">
+    <button id="btn3" class="btn"><img src="https://th.bing.com/th/id/Rd41427e11f0b5069fda610bf8b49b930?rik=J%2fMubujtBPOhXg&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fcustom-icon-design%2fmono-general-2%2f512%2fsearch-icon.png&ehk=5AO8%2fHeS7wi4cF9kkpMRuaQOU2o3H6iNQ%2fONeuKqc4I%3d&risl=&pid=ImgRaw" style="height: 40px; width: 40px; vertical-align:middle;">
+    </button>
+    <div>
+      <div id="output2" ></div>
+  </div>
+
+  <br><br><br>
+
+
+    </div>
+    </div>
+    </div>
+<script src="Filter_Page.js"></script>
+</body>
+</html>

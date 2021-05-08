@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="./static//main.css">
+  <link rel="stylesheet" href="./static//bootstrap.css">
+  <title>User Sign IN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div>
+    <header>
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-bg-color">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Job Portal</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <div class="main-SignUPlayouts wrapper">
+      <div class="main-agileinfo">
+        <div class="agileits-top">
+		<h2>User SignIn</h2>
+          <form id="SignUP_form" method="get" onsubmit="return validateform(this)">
+            <input class="text" id="user_id" type="text" name="UserID" placeholder="User ID" required="">
+            <p id="user_val"></p>
+			
+            <input class="text email" id="email_id" type="email" name="email" placeholder="Email ID" required="">
+            <p id="user_email"></p>
+			
+            <input class="text" id="myPwd1" type="password"
+              title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." required
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" placeholder="Password">
+            <p id="user_pwd1"></p>
+			
+			
+            </p>
+            <input type="submit" value="SIGN IN">
+          </form>
+          <p>Don't have an Account? <a href="UserRegistration.html"> Create One!</a></p>
+        </div>
+      </div>
+    </div>
+	</section>
+    <footer class="footer-css"></footer>
+    <!-- //main -->
+
+    <script src="./javascript//userSignIn.js">
+
+    </script>
+</body>
+
+</html>
